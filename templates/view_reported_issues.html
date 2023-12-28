@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reported Issues</title>
+</head>
+<body>
+    <h1>Reported Issues</h1>
+    <ul>
+        {% for issue in reported_issues %}
+            <li>
+                <strong>Reporter:</strong> {{ issue['reporter_name'] }}<br>
+                <strong>Description:</strong> {{ issue['issue_description'] }}<br>
+                <strong>Timestamp:</strong> {{ issue['timestamp'] }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
